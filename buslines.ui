@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BusLines</class>
+ <widget class="QDialog" name="BusLines">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>444</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>DODAWANIE NOWEJ LINII</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <widget class="QWidget" name="createBusLinePage">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="linegroupLabel">
+         <property name="text">
+          <string>NAZWA LINII</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="lineIdLabel">
+         <property name="text">
+          <string>NAZWA ZMIANY</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="lineIdTextEdit">
+         <property name="maximumSize">
+          <size>
+           <width>393</width>
+           <height>22</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="startTimeLabel">
+         <property name="text">
+          <string>GODZINA ROZPOCZĘCIA</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="startTimeTimeEdit">
+         <property name="correctionMode">
+          <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
+         </property>
+         <property name="keyboardTracking">
+          <bool>true</bool>
+         </property>
+         <property name="showGroupSeparator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="maximumDateTime">
+          <datetime>
+           <hour>22</hour>
+           <minute>59</minute>
+           <second>59</second>
+           <year>2000</year>
+           <month>1</month>
+           <day>1</day>
+          </datetime>
+         </property>
+         <property name="currentSection">
+          <enum>QDateTimeEdit::Section::HourSection</enum>
+         </property>
+         <property name="displayFormat">
+          <string>HH:mm</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>false</bool>
+         </property>
+         <property name="timeSpec">
+          <enum>Qt::TimeSpec::UTC</enum>
+         </property>
+         <property name="time">
+          <time>
+           <hour>0</hour>
+           <minute>0</minute>
+           <second>0</second>
+          </time>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="endTimeLabel">
+         <property name="text">
+          <string>GODZINA ZAKOŃCZENIA</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="endTimeTimeEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="drivingTimeLabel">
+         <property name="text">
+          <string>CZAS JAZDY</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="drivingTimeTimeEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="breaksAbove15MinLabel">
+         <property name="text">
+          <string>PRZERWY POWYŻEJ 15 MINUT</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="breaksAbove15MinTimeEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="countBreaksAbove15MinLabel">
+         <property name="text">
+          <string>ILOŚĆ PRZERW POWYŻEJ 15 MINUT</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="countBreaksAbove15MinTimeEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="otherBreaksAndWorkLabel">
+         <property name="text">
+          <string>INNE PRZERWY I PRACA</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="otherBreaksAndWorkTimeEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="ocLabel">
+         <property name="text">
+          <string>OC</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="ocTimeEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="totalWorkTimeLabel">
+         <property name="text">
+          <string>ŁĄCZNY CZAS PRACY</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="totalWorkTimeTimeEdit"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addBusLineButton">
+         <property name="text">
+          <string>DODAJ</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="editBusLinePage"/>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

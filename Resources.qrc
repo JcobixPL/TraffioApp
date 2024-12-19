@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>Resources/Icons/account.png</file>
+        <file>Resources/Icons/bell.png</file>
+        <file>Resources/Icons/icon.png</file>
+        <file>Resources/Icons/settings.png</file>
+    </qresource>
+</RCC>
